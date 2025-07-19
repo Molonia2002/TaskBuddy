@@ -1,50 +1,129 @@
-# Welcome to your Expo app 👋
+# 📱 TaskBuddy
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**TaskBuddy** is a modern mobile task management app built with React Native (using Expo) that helps users manage their daily tasks efficiently. It features a calendar-based task selector, user authentication with Firebase, task creation, editing, deletion, and real-time sync.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+- ✅ User Registration and Login (with Firebase Auth)
+- 📅 Calendar-style task selector
+- 📝 Create, edit, and delete tasks
+- 🔔 Mark tasks as complete/incomplete
+- 🔄 Real-time task sync (Firestore)
+- 🧠 Clean and intuitive UI with reusable components
+- 🔒 Secure data storage
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🛠️ Tech Stack
 
-In the output, you'll find options to open the app in a
+| Tech        | Description                              |
+|-------------|------------------------------------------|
+| React Native| Cross-platform mobile development        |
+| Expo        | Simplified React Native development      |
+| Firebase    | Backend services: Auth & Firestore       |
+| TypeScript  | Type safety and scalable development     |
+| React Navigation | Navigation between app screens     |
+| React Native Calendars | Calendar UI for task planning |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📦 Project Structure
 
-## Get a fresh project
+TaskBuddy/
+├── assets/ # Static assets (icons, images)
+├── components/ # Reusable UI components
+├── constants/ # Global styles and theme
+├── hooks/ # Custom hooks
+├── screens/ # App screens (Login, Home, Task, etc.)
+├── services/ # Firebase and helper services
+├── navigation/ # Navigation stack and routing
+├── app/ # Entry point with providers
+├── firebaseConfig.ts # Firebase setup
+├── app.json # Expo config
+└── README.md # Project documentation
 
-When you're ready, run:
+
+## 🔧 Setup Instructions
+
+### 1. Prerequisites
+
+- Node.js & npm installed
+- Expo CLI: `npm install -g expo-cli`
+- Firebase project created
+
+### 2. Clone the Repository
 
 ```bash
-npm run reset-project
-```
+git clone https://github.com/Molonia2002/TaskBuddy.git
+cd TaskBuddy
+3. Install Dependencies
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+npm install
+4. Set Up Firebase
+Go to Firebase Console
 
-## Learn more
+Create a new project
 
-To learn more about developing your project with Expo, look at the following resources:
+Enable Email/Password in Authentication
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Create a Firestore database in test mode
 
-## Join the community
+Copy your Firebase config keys
 
-Join our community of developers creating universal apps.
+Update firebaseConfig.ts with:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+export const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID",
+};
+5. Run the App
+
+npx expo start
+Scan the QR code with your Expo Go app or run on emulator.
+
+👤 User Flow
+Register or login
+
+View task calendar
+
+Create new task for a specific date
+
+View, mark as complete, or delete tasks
+
+Log out
+
+📸 Screenshots
+(Include screenshots of Login screen, Home screen, Task calendar, etc.)
+
+🧪 Coming Soon
+Push notifications
+
+Google Calendar sync
+
+Dark mode
+
+Offline storage
+
+🛡️ License
+This project is licensed under the MIT License.
+
+🙌 Contributing
+Pull requests are welcome! If you'd like to contribute:
+
+Fork the repo
+
+Create a branch: git checkout -b feature/my-feature
+
+Commit and push
+
+Open a PR
+
+📬 Contact
+Developer: Favour Molonia
+GitHub: @Molonia2002
